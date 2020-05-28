@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    margin: 20px auto;
+    max-width: 600px;
+    max-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.game {
+    position: relative;
+    max-width: 600px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#container:before {
+    opacity: 0;
+    content: '';
+    padding: auto;
+    left: 0;
+    top: 0;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 400px;
+    color: white;
+    z-index: 100;
+}
+
+#container.PAUSING:before {
+    opacity: 70%;
+    content: 'PAUSE';
+}
+
+#container.LOSING:before {
+    opacity: 70%;
+    content: 'YOU LOSE !';
+}
+
+#container.WINING:before {
+    opacity: 70%;
+    content: 'YOU WIN !';
+}
+
+table.background {
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+/* 
+td {
+    border: 1px solid black;
+} */
+
+.empty {
+    background-color: rgb(21, 101, 192);
+}
+
+.lava {
+    background-color: rgb(244, 67, 54);
+    opacity: 0.9;
+}
+
+.wall {
+    background-color: white;
+}
+
+.player {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.801);
+    z-index: 10;
+}
+
+.coin {
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.actor {
+    position: absolute;
+}
